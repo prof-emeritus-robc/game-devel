@@ -1,0 +1,54 @@
+CREATE TABLE domain (
+    id TEXT NOT NULL PRIMARY KEY,
+    enName TEXT NOT NULL,
+    zhName TEXT NOT NULL
+);
+
+CREATE TABLE term (
+    id TEXT NOT NULL PRIMARY KEY,
+    domainId TEXT NOT NULL,
+    zh TEXT NOT NULL,
+    pinyin TEXT NOT NULL,
+    en TEXT NOT NULL,
+    level INTEGER NOT NULL,
+    audioUri TEXT
+);
+CREATE INDEX term_domain ON term(domainId);
+
+CREATE TABLE progress (
+    termId TEXT NOT NULL PRIMARY KEY,
+    ease REAL NOT NULL DEFAULT 2.5,
+    intervalDays INTEGER NOT NULL DEFAULT 0,
+    dueAt INTEGER NOT NULL DEFAULT 0,
+    correctCount INTEGER NOT NULL DEFAULT 0,
+    wrongCount INTEGER NOT NULL DEFAULT 0
+);
+
+selectDomains:
+SELECT * FROM domain;
+
+selectTermsByDomain:
+SELECT * FROM term WHERE domainId = ?;
+
+selectAllTerms:
+SELECT * FROM term;
+
+selectTermById:
+SELECT * FROM term WHERE id = ?;
+
+insertDomain:
+INSERT OR REPLACE INTO domain(id, enName, zhName) VALUES (?, ?, ?);
+
+insertTerm:
+INSERT OR REPLACE INTO term(id, domainId, zh, pinyin, en, level, audioUri)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+countTerms:
+SELECT COUNT(*) FROM term;
+
+selectProgress:
+SELECT * FROM progress WHERE termId = ?;
+
+upsertProgress:
+INSERT OR REPLACE INTO progress(termId, ease, intervalDays, dueAt, correctCount, wrongCount)
+VALUES (?, ?, ?, ?, ?, ?);
