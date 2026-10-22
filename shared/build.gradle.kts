@@ -6,7 +6,12 @@ plugins {
 }
 
 kotlin {
-    androidTarget()
+    jvmToolchain(17)
+    androidTarget {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+        }
+    }
     sourceSets {
         val commonMain by getting {
             dependencies {
@@ -28,6 +33,10 @@ android {
     namespace = "com.example.chinesegame.shared"
     compileSdk = 34
     defaultConfig { minSdk = 26 }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
 }
 
 sqldelight {
