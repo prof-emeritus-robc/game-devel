@@ -1,0 +1,37 @@
+{
+  "domains": [
+    { "id": "general",  "enName": "General buttons", "zhName": "通用按钮" },
+    { "id": "settings", "enName": "Settings",        "zhName": "设置" },
+    { "id": "shopping", "enName": "Shopping",        "zhName": "购物" },
+    { "id": "chat",     "enName": "Messaging",       "zhName": "聊天" }
+  ],
+  "terms": [
+    { "id": "gen-ok",      "domainId": "general",  "zh": "确定", "pinyin": "quèdìng",  "en": "OK",              "level": 1 },
+    { "id": "gen-cancel",  "domainId": "general",  "zh": "取消", "pinyin": "qǔxiāo",   "en": "Cancel",          "level": 1 },
+    { "id": "gen-back",    "domainId": "general",  "zh": "返回", "pinyin": "fǎnhuí",   "en": "Back",            "level": 1 },
+    { "id": "gen-save",    "domainId": "general",  "zh": "保存", "pinyin": "bǎocún",   "en": "Save",            "level": 1 },
+    { "id": "gen-delete",  "domainId": "general",  "zh": "删除", "pinyin": "shānchú",  "en": "Delete",          "level": 1 },
+    { "id": "gen-search",  "domainId": "general",  "zh": "搜索", "pinyin": "sōusuǒ",   "en": "Search",          "level": 1 },
+
+    { "id": "set-account", "domainId": "settings", "zh": "账号", "pinyin": "zhànghào", "en": "Account",         "level": 1 },
+    { "id": "set-password","domainId": "settings", "zh": "密码", "pinyin": "mìmǎ",     "en": "Password",        "level": 1 },
+    { "id": "set-notify",  "domainId": "settings", "zh": "通知", "pinyin": "tōngzhī",  "en": "Notifications",   "level": 2 },
+    { "id": "set-privacy", "domainId": "settings", "zh": "隐私", "pinyin": "yǐnsī",    "en": "Privacy",         "level": 2 },
+    { "id": "set-language","domainId": "settings", "zh": "语言", "pinyin": "yǔyán",    "en": "Language",        "level": 1 },
+    { "id": "set-logout",  "domainId": "settings", "zh": "退出登录", "pinyin": "tuìchū dēnglù", "en": "Log out", "level": 2 },
+
+    { "id": "shop-cart",   "domainId": "shopping", "zh": "购物车", "pinyin": "gòuwùchē", "en": "Shopping cart", "level": 1 },
+    { "id": "shop-buy",    "domainId": "shopping", "zh": "立即购买", "pinyin": "lìjí gòumǎi", "en": "Buy now",  "level": 2 },
+    { "id": "shop-pay",    "domainId": "shopping", "zh": "支付", "pinyin": "zhīfù",    "en": "Pay",             "level": 1 },
+    { "id": "shop-order",  "domainId": "shopping", "zh": "订单", "pinyin": "dìngdān",  "en": "Order",           "level": 1 },
+    { "id": "shop-ship",   "domainId": "shopping", "zh": "发货", "pinyin": "fāhuò",    "en": "Ship",            "level": 2 },
+    { "id": "shop-refund", "domainId": "shopping", "zh": "退款", "pinyin": "tuìkuǎn",  "en": "Refund",          "level": 2 },
+
+    { "id": "chat-send",   "domainId": "chat",     "zh": "发送", "pinyin": "fāsòng",   "en": "Send",            "level": 1 },
+    { "id": "chat-reply",  "domainId": "chat",     "zh": "回复", "pinyin": "huífù",    "en": "Reply",           "level": 1 },
+    { "id": "chat-contact","domainId": "chat",     "zh": "联系人", "pinyin": "liánxìrén", "en": "Contacts",     "level": 1 },
+    { "id": "chat-add",    "domainId": "chat",     "zh": "添加好友", "pinyin": "tiānjiā hǎoyǒu", "en": "Add friend", "level": 2 },
+    { "id": "chat-voice",  "domainId": "chat",     "zh": "语音", "pinyin": "yǔyīn",    "en": "Voice message",   "level": 2 },
+    { "id": "chat-share",  "domainId": "chat",     "zh": "分享", "pinyin": "fēnxiǎng", "en": "Share",           "level": 1 }
+  ]
+}
